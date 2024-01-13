@@ -23,11 +23,10 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 
-
 -- Git
 vim.keymap.set("n", "<leader>gs", ":G status<CR>")
 vim.keymap.set("n", "<leader>gp", ":G push<CR>")
 vim.keymap.set("n", "<leader>gc", ":G commit<CR>")
-
+vim.keymap.set("n", "<leader>gb", builtin.git_branches, {})
 
 return {}
