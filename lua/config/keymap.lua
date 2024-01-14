@@ -11,6 +11,14 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
+-- for some reason C-l is not overridden in Netrw, so here's a little workaround
+vim.api.nvim_create_autocmd("filetype", {
+	pattern = "netrw",
+	desc = "Better mappings for netrw",
+	callback = function()
+		vim.keymap.set("n", "<C-l>", "<C-w>l", { remap = true, buffer = true })
+	end,
+})
 
 -- LSP
 vim.keymap.set("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
