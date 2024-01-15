@@ -33,6 +33,14 @@ return {
 				p = "Push",
 				s = "Status",
 			},
+			["<leader>z"] = {
+				name = "+harpoon",
+				c = "Clear Harpoon List",
+				["1"] = "Remove Mark at 1 Index",
+				["2"] = "Remove Mark at 2 Index",
+				["3"] = "Remove Mark at 3 Index",
+				["4"] = "Remove Mark at 4 Index",
+			},
 		})
 	end,
 }
