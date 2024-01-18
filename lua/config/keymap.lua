@@ -23,6 +23,7 @@ vim.api.nvim_create_autocmd("filetype", {
 -- LSP
 vim.keymap.set("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 vim.keymap.set("n", "<leader>l", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
+vim.keymap.set("n", "<leader><leader>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 
 -- Telescope
 local builtin = require("telescope.builtin")
