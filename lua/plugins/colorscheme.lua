@@ -1,22 +1,10 @@
 return {
     {
-        "devsjc/vim-jb",
+        "aktersnurra/no-clown-fiesta.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            vim.g.jb_enable_italics = 1
-            vim.cmd("colorscheme jb")
+            vim.cmd.colorscheme("no-clown-fiesta")
         end,
-    },
-    -- {
-    --     "felipeagc/fleet-theme-nvim",
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         vim.cmd("colorscheme fleet")
-    --     end,
-    -- },
-    {
-        "folke/tokyonight.nvim",
     },
 }
