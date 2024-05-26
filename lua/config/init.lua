@@ -7,6 +7,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.termguicolors = true
+vim.opt.ic = true
 
 vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function()

@@ -1,5 +1,8 @@
 vim.g.mapleader = " "
 
+vim.keymap.set("n", "<Esc>", ":noh<CR>", { silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>y", "\"+y")
+
 -- move lines with selection up and down
 vim.keymap.set("n", "<C-s>", ":w<CR>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -13,18 +16,18 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 -- for some reason C-l is not overridden in Netrw, so here's a little workaround
 vim.api.nvim_create_autocmd("filetype", {
-	pattern = "netrw",
-	desc = "Better mappings for netrw",
-	callback = function()
-		vim.keymap.set("n", "<C-l>", "<C-w>l", { remap = true, buffer = true })
-	end,
+    pattern = "netrw",
+    desc = "Better mappings for netrw",
+    callback = function()
+        vim.keymap.set("n", "<C-l>", "<C-w>l", { remap = true, buffer = true })
+    end,
 })
 
 -- LSP
 vim.keymap.set("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<cr>")
 vim.keymap.set("n", "<leader>l", "<cmd>lua vim.lsp.buf.format({async = true})<cr>")
 vim.keymap.set("n", "<leader><leader>", "<cmd>lua vim.lsp.buf.code_action()<cr>")
-vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>")
+vim.keymap.set("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<cr>")
 vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>")
 vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>")
 

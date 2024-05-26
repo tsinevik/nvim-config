@@ -24,6 +24,15 @@ return {
                     lua_ls = function()
                         lspconfig.lua_ls.setup(lsp_zero.nvim_lua_ls())
                     end,
+                    tsserver = function()
+                        lspconfig.tsserver.setup({
+                            settings = {
+                                implicitProjectConfiguration = {
+                                    checkJs = true
+                                },
+                            }
+                        })
+                    end,
                     gopls = function()
                         lspconfig.gopls.setup({
                             settings = {
