@@ -4,7 +4,6 @@ vim.keymap.set("n", "<Esc>", ":noh<CR>", { silent = true })
 vim.keymap.set({ "n", "v" }, "<leader>y", "\"+y")
 
 -- move lines with selection up and down
-vim.keymap.set("n", "<C-s>", ":w<CR>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
